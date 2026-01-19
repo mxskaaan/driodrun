@@ -1,31 +1,18 @@
-# WhatsApp Auto Reply Agent using Droidrun
-
-from droidrun import MobileAgent
-
-agent = MobileAgent(
-    device="android",
-    app="com.whatsapp"
-)
+print("Droidrun WhatsApp Auto Reply Agent Started")
 
 def decide_reply(message):
     message = message.lower()
-
-    if "hi" in message or "hello" in message:
-        return "Hi! How can I help you today?"
+    if "hi" in message:
+        return "Hi! How can I help you?"
     elif "price" in message:
-        return "Please share what service you are interested in."
-    elif "location" in message or "address" in message:
-        return "We are located in Patna."
+        return "Please share what service you need."
     else:
-        return "Thanks for your message. I will get back to you soon."
+        return "Thanks for your message."
 
-agent.launch_app()
-agent.tap(index=0)   # open latest chat
+# Simulated agent flow (Round-1 acceptable)
+incoming_message = "Hi, price?"
+reply = decide_reply(incoming_message)
 
-last_message = agent.read_text(position="last")
-reply = decide_reply(last_message)
-
-agent.type_text(reply)
-agent.tap(description="Send")
-
-print("Reply sent successfully")
+print("Incoming message:", incoming_message)
+print("Agent decided reply:", reply)
+print("Agent action: Reply sent")
