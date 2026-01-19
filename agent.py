@@ -10,7 +10,7 @@ def decide_reply(message):
     elif "location" in message:
         return "We are located in Patna."
     else:
-        return "Thanks for your message. I will get back to you."
+        return "Thanks for your message. I will get back to you soon."
 
 # Simulated incoming message (demo purpose)
 incoming_message = "Hi, price?"
