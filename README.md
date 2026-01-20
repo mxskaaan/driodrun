@@ -17,5 +17,6 @@ The agent observes incoming messages, makes decisions using rules, and performs 
 - Python
 - Android Device / Emulator
 
-## Demo
-See the demo video for working automation.
+## Demo Video
+A complete 3-minute demonstration of the agent running on a real Android device:  
+(https://www.youtube.com/watch?v=PEFdNtWKLgE)
